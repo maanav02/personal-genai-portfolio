@@ -87,10 +87,12 @@ h2 { font: 600 clamp(30px, 4vw, 42px)/1.15 var(--display); letter-spacing: -1.6p
 .check-list li:last-child { border: 0; }
 .check-list li:before { content: "✓"; color: var(--green); position: absolute; left: 0; }
 .concept-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 13px; }
-.concept-card { position: relative; min-height: 260px; padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
-.concept-card:after { content: ""; position: absolute; width: 120px; height: 120px; border-radius: 50%; background: rgba(126,111,255,.08); filter: blur(35px); right: -40px; bottom: -45px; }
-.concept-number { color: #65738a; font: 10px var(--display); }
-.concept-icon { color: #b4a3ff; font-size: 27px; margin: 14px 0 8px; }
+.concept-card { position: relative; min-height: 310px; padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.concept-card:after { content: ""; position: absolute; width: 120px; height: 120px; border-radius: 50%; background: rgba(126,111,255,.08); filter: blur(35px); right: -40px; bottom: -45px; pointer-events: none; }
+.concept-number { color: #65738a; font: 10px var(--display); position: relative; z-index: 1; }
+.concept-art { position: relative; z-index: 1; width: 100%; height: 96px; margin: 12px 0 15px; overflow: hidden; display: flex; align-items: center; border: 1px solid rgba(157,139,255,.16); border-radius: 10px; background: linear-gradient(135deg, rgba(35,39,68,.72), rgba(15,28,39,.72)); }
+.concept-art svg { display: block; width: 100%; height: 100%; }
+.concept-card h3, .concept-card p, .concept-card .tag { position: relative; z-index: 1; }
 .concept-card h3 { font: 600 17px var(--display); margin-bottom: 9px; }
 .concept-card p { color: var(--muted); font-size: 11px; line-height: 1.75; }
 .tag { display: inline-block; padding: 5px 8px; border-radius: 5px; color: #b6a8ff; background: rgba(156,123,255,.1); font-size: 9px; }
